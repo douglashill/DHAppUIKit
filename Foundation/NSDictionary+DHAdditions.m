@@ -8,32 +8,32 @@
 
 @implementation NSDictionary (DHJSONReading)
 
-- (NSString *)stringForKey:(NSString *)key
+- (NSString *)dh_stringForKey:(NSString *)key
 {
-	return [self objectForKey:key ofClass:[NSString class]];
+	return [self dh_objectForKey:key ofClass:[NSString class]];
 }
 
-- (NSNumber *)numberForKey:(NSString *)key;
+- (NSNumber *)dh_numberForKey:(NSString *)key;
 {
-	return [self objectForKey:key ofClass:[NSNumber class]];
+	return [self dh_objectForKey:key ofClass:[NSNumber class]];
 }
 
-- (NSArray *)arrayForKey:(NSString *)key;
+- (NSArray *)dh_arrayForKey:(NSString *)key;
 {
-	return [self objectForKey:key ofClass:[NSArray class]];
+	return [self dh_objectForKey:key ofClass:[NSArray class]];
 }
 
-- (NSDictionary *)dictionaryForKey:(NSString *)key;
+- (NSDictionary *)dh_dictionaryForKey:(NSString *)key;
 {
-	return [self objectForKey:key ofClass:[NSDictionary class]];
+	return [self dh_objectForKey:key ofClass:[NSDictionary class]];
 }
 
-- (NSNull *)nullForKey:(NSString *)key;
+- (NSNull *)dh_nullForKey:(NSString *)key;
 {
-	return [self objectForKey:key ofClass:[NSNull class]];
+	return [self dh_objectForKey:key ofClass:[NSNull class]];
 }
 
-- (id)objectForKey:(NSString *)key ofClass:(Class)class
+- (id)dh_objectForKey:(NSString *)key ofClass:(Class)class
 {
 	if ([self[key] isKindOfClass:class] == NO) {
 		return nil;

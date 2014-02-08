@@ -8,10 +8,10 @@
 
 @interface NSDictionary (DHJSONReading)
 
-- (NSString *)stringForKey:(NSString *)key;
-- (NSNumber *)numberForKey:(NSString *)key;
-- (NSArray *)arrayForKey:(NSString *)key;
-- (NSDictionary *)dictionaryForKey:(NSString *)key;
-- (NSNull *)nullForKey:(NSString *)key;
+- (NSString *)dh_stringForKey:(NSString *)key;
+- (NSNumber *)dh_numberForKey:(NSString *)key;
+- (NSArray *)dh_arrayForKey:(NSString *)key;
+- (NSDictionary *)dh_dictionaryForKey:(NSString *)key;
+- (NSNull *)dh_nullForKey:(NSString *)key;
 
 @end
