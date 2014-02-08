@@ -6,7 +6,7 @@
 
 #import "NSDictionary+DHAdditions.h"
 
-@interface NSDictionary (DHJSONReading)
+@implementation NSDictionary (DHJSONReading)
 
 - (NSString *)stringForKey:(NSString *)key
 {
