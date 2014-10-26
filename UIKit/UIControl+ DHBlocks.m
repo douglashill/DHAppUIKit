@@ -1,7 +1,7 @@
 // Douglas Hill, October 2013
 // https://github.com/douglashill/Objective-C-bits-and-bobs
 
-#import "UIControl+DHAdditions.h"
+#import "UIControl+ DHBlocks.h"
 
 #import <objc/runtime.h>
 

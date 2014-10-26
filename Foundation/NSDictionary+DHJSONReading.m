@@ -1,7 +1,7 @@
 // Douglas Hill, February 2014
 // https://github.com/douglashill/Objective-C-bits-and-bobs
 
-#import "NSDictionary+DHAdditions.h"
+#import "NSDictionary+DHJSONReading.h"
 
 @implementation NSDictionary (DHJSONReading)
 
