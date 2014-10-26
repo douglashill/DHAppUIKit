@@ -1,8 +1,5 @@
-//
-//  NSDictionary+DHAdditions.m
-//  Douglas Hill, February 2014
-//  https://github.com/douglashill/Objective-C-utilities
-//
+// Douglas Hill, February 2014
+// https://github.com/douglashill/Objective-C-bits-and-bobs
 
 #import "NSDictionary+DHAdditions.h"
 

@@ -1,12 +1,8 @@
-//
-//  UIControl+DHAdditions.m
-//  DHTweak
-//
-//  Created by Douglas Hill on 06/10/2013.
-//  Copyright (c) 2013 Douglas Hill. All rights reserved.
-//
+// Douglas Hill, October 2013
+// https://github.com/douglashill/Objective-C-bits-and-bobs
 
 #import "UIControl+DHAdditions.h"
+
 #import <objc/runtime.h>
 
 static char DHUIControlEventBlocksKey;
