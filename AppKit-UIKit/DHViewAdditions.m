@@ -3,7 +3,7 @@
 
 #import "DHViewAdditions.h"
 
-static NSDictionary *DHDictionaryFromEdgeInsets(DH_EDGE_INSETS edgeInsets)
+static NSDictionary *__nonnull DHDictionaryFromEdgeInsets(DH_EDGE_INSETS edgeInsets)
 {
 	return @{
 			 @"top"    : @(edgeInsets.top),
@@ -45,7 +45,7 @@ static NSDictionary *DHDictionaryFromEdgeInsets(DH_EDGE_INSETS edgeInsets)
 
 @implementation DH_VIEW (DHSubviews)
 
-- (NSSet *)dh_recursiveSubviewsPassingTest:(DHSubviewsPredicte)predicate
+- (nonnull NSSet *)dh_recursiveSubviewsPassingTest:(nullable DHSubviewsPredicte)predicate
 {
 	NSMutableSet *viewsPassingTest = [NSMutableSet set];
 	
@@ -54,7 +54,7 @@ static NSDictionary *DHDictionaryFromEdgeInsets(DH_EDGE_INSETS edgeInsets)
 	return viewsPassingTest;
 }
 
-- (void)dh_addSelfAndRecursiveSubviewsToSet:(NSMutableSet *)set ifPassingTest:(DHSubviewsPredicte)predicate
+- (void)dh_addSelfAndRecursiveSubviewsToSet:(nonnull NSMutableSet *)set ifPassingTest:(nullable DHSubviewsPredicte)predicate
 {
 	if (predicate == nil || predicate(self)) [set addObject:self];
 	

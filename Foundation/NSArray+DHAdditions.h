@@ -3,18 +3,23 @@
 
 @import Foundation;
 
+#import "DHMap.h"
+
 @interface NSArray (DHMap)
 
-- (NSArray *)dh_arrayByMappingObjectsUsingMap:(id (^)(id object))map;
+- (nonnull NSArray *)dh_arrayByMappingObjectsUsingMap:(nonnull DHObjectMap)map;
 
-- (NSDictionary *)dh_dictionaryByMappingObjectsUsingMap:(NSArray *(^)(id object))map;
+- (nonnull NSDictionary *)dh_dictionaryByMappingObjectsUsingMap:(nonnull DHKeyValueMap)map;
 
 @end
 
+typedef BOOL (^DHIndexedCollectionFilterPredicate)(id __nonnull object, NSUInteger idx, BOOL *__nonnull stop);
+typedef BOOL (^DHIndexedFilterPredicate)(id __nonnull object, NSUInteger idx);
+
 @interface NSArray (DHExtendedArray)
 
-- (NSArray *)dh_objectsPassingTest:(BOOL (^)(id object, NSUInteger idx, BOOL *stop))predicate;
-- (id)dh_firstObjectPassingTest:(BOOL (^)(id, NSUInteger))predicate;
-- (NSUInteger)dh_indexOfFirstObjectPassingTest:(BOOL (^)(id, NSUInteger))predicate;
+- (nonnull NSArray *)dh_objectsPassingTest:(nonnull DHIndexedCollectionFilterPredicate)predicate;
+- (nullable id)dh_firstObjectPassingTest:(nonnull DHIndexedFilterPredicate)predicate;
+- (NSUInteger)dh_indexOfFirstObjectPassingTest:(nonnull DHIndexedFilterPredicate)predicate;
 
 @end

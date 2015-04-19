@@ -29,11 +29,11 @@
 
 @end
 
-typedef BOOL(^DHSubviewsPredicte)(DH_VIEW *view);
+typedef BOOL(^DHSubviewsPredicte)(DH_VIEW *__nonnull view);
 
 @interface DH_VIEW (DHSubviews)
 
 /// Flattens and filters the view tree, starting at, and including, the receiver. Returns views that return YES when passed to predicate, or everything in the view tree if predicate is nil.
-- (NSSet *)dh_recursiveSubviewsPassingTest:(DHSubviewsPredicte)predicate;
+- (nonnull NSSet *)dh_recursiveSubviewsPassingTest:(nullable DHSubviewsPredicte)predicate;
 
 @end

@@ -35,13 +35,13 @@ static char DHUIControlEventBlocksKey;
 
 @interface UIControl (DHBlocks_private)
 
-@property (nonatomic, strong, readonly) NSMutableSet *dh_eventBlocks;
+@property (nonatomic, nonnull, strong, readonly) NSMutableSet *dh_eventBlocks;
 
 @end
 
 @implementation UIControl (DHBlocks_private)
 
-- (NSMutableSet *)dh_eventBlocks
+- (nonnull NSMutableSet *)dh_eventBlocks
 {
 	NSMutableSet *eventBlocks = objc_getAssociatedObject(self, &DHUIControlEventBlocksKey);
 	
@@ -57,11 +57,9 @@ static char DHUIControlEventBlocksKey;
 
 @implementation UIControl (DHBlocks)
 
-- (id)dh_addBlock:(DHControlEventBlock)block forControlEvents:(UIControlEvents)events
+- (nonnull id)dh_addBlock:(nonnull DHControlEventBlock)block forControlEvents:(UIControlEvents)events
 {
-	if (block == nil) return nil;
-	
-	DHUIControlBlockKeeper *keeper = [DHUIControlBlockKeeper blockKeeperWithBlock:block];
+	DHUIControlBlockKeeper *const keeper = [DHUIControlBlockKeeper blockKeeperWithBlock:block];
 	
 	[[self dh_eventBlocks] addObject:keeper];
 	
@@ -70,10 +68,8 @@ static char DHUIControlEventBlocksKey;
 	return keeper;
 }
 
-- (void)dh_removeBlockForToken:(id)token forControlEvents:(UIControlEvents)events
+- (void)dh_removeBlockForToken:(nonnull id)token forControlEvents:(UIControlEvents)events
 {
-	if (token == nil) return;
-	
 	NSParameterAssert([[self dh_eventBlocks] containsObject:token]);
 	
 	[self removeTarget:token action:@selector(runBlock:) forControlEvents:events];

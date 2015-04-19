@@ -3,21 +3,18 @@
 
 #import "DHFormatterTransformer.h"
 
+#import "DHExceptionCreation.h"
+
 @implementation DHFormatterTransformer
 
-- (id)init
+- (instancetype)init
 {
-	return [self initWithFormatter:nil];
+	@throw DH_EXCEPTION(NSInvalidArgumentException, @"%@ must be initialised using initWithFormatter:.", [self class]);
 }
 
-- (instancetype)initWithFormatter:(NSFormatter *)formatter
+- (nonnull instancetype)initWithFormatter:(nonnull NSFormatter *)formatter
 {
 	self = [super init];
-	if (self == nil) return nil;
-	
-	if (formatter == nil) {
-		[NSException raise:NSInvalidArgumentException format:@"%@ must not be initialised without a formatter.", [self class]];
-	}
 	
 	_formatter = formatter;
 	

@@ -5,9 +5,11 @@
 
 @interface DHFormatterTransformer : NSValueTransformer
 
-/// Designated initialiser
-- (instancetype)initWithFormatter:(NSFormatter *)formatter;
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
-@property (nonatomic, strong, readonly) NSFormatter *formatter;
+/// Designated initialiser
+- (nonnull instancetype)initWithFormatter:(nonnull NSFormatter *)formatter;
+
+@property (nonatomic, nonnull, strong, readonly) NSFormatter *formatter;
 
 @end

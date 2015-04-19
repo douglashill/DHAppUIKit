@@ -5,7 +5,7 @@
 
 @implementation UIWindow (DHTopViewController)
 
-- (UIViewController *)dh_topViewController
+- (nullable UIViewController *)dh_topViewController
 {
 	UIViewController *viewController = [self rootViewController];
 	

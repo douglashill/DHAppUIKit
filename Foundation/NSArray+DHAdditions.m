@@ -5,7 +5,7 @@
 
 @implementation NSArray (DHMap)
 
-- (NSArray *)dh_arrayByMappingObjectsUsingMap:(id (^)(id object))map
+- (nonnull NSArray *)dh_arrayByMappingObjectsUsingMap:(nonnull DHObjectMap)map
 {
 	NSMutableArray *mappedArray = [NSMutableArray arrayWithCapacity:[self count]];
 	
@@ -17,7 +17,7 @@
 	return mappedArray;
 }
 
-- (NSDictionary *)dh_dictionaryByMappingObjectsUsingMap:(NSArray *(^)(id object))map
+- (nonnull NSDictionary *)dh_dictionaryByMappingObjectsUsingMap:(nonnull DHKeyValueMap)map
 {
 	NSMutableDictionary *mappedDictionary = [NSMutableDictionary dictionaryWithCapacity:[self count]];
 	
@@ -36,19 +36,19 @@
 
 @implementation NSArray (DHExtendedArray)
 
-- (NSArray *)dh_objectsPassingTest:(BOOL (^)(id object, NSUInteger idx, BOOL *stop))predicate
+- (nonnull NSArray *)dh_objectsPassingTest:(nonnull DHIndexedCollectionFilterPredicate)predicate
 {
 	return [self objectsAtIndexes:[self indexesOfObjectsPassingTest:predicate]];
 }
 
-- (id)dh_firstObjectPassingTest:(BOOL (^)(id, NSUInteger))predicate
+- (nullable id)dh_firstObjectPassingTest:(nonnull DHIndexedFilterPredicate)predicate
 {
 	NSUInteger const indexOfFirstMatchingObject = [self dh_indexOfFirstObjectPassingTest:predicate];
 	if (indexOfFirstMatchingObject == NSNotFound) return nil;
 	return self[indexOfFirstMatchingObject];
 }
 
-- (NSUInteger)dh_indexOfFirstObjectPassingTest:(BOOL (^)(id, NSUInteger))predicate
+- (NSUInteger)dh_indexOfFirstObjectPassingTest:(nonnull DHIndexedFilterPredicate)predicate
 {
 	return [[self indexesOfObjectsPassingTest:^BOOL(id object, NSUInteger idx, BOOL *stop) {
 		if (predicate(object, idx)) {

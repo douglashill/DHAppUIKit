@@ -3,11 +3,9 @@
 
 #import "NSSet+DHAdditions.h"
 
-#import "DHExceptionCreation.h"
-
 @implementation NSSet (DHMap)
 
-- (NSSet *)dh_setByMappingObjectsUsingMap:(id (^)(id object))map
+- (nonnull NSSet *)dh_setByMappingObjectsUsingMap:(nonnull DHObjectMap)map
 {
 	NSMutableSet *mappedSet = [NSMutableSet setWithCapacity:[self count]];
 	
@@ -19,7 +17,7 @@
 	return mappedSet;
 }
 
-- (NSDictionary *)dh_dictionaryByMappingObjectsUsingMap:(NSArray *(^)(id object))map
+- (nonnull NSDictionary *)dh_dictionaryByMappingObjectsUsingMap:(nonnull DHKeyValueMap)map
 {
 	NSMutableDictionary *mappedDictionary = [NSMutableDictionary dictionaryWithCapacity:[self count]];
 	
@@ -38,14 +36,10 @@
 
 @implementation NSSet (DHExtendedSet)
 
-- (id)dh_anyObjectPassingTest:(BOOL (^)(id, BOOL *))predicate
+- (nullable id)dh_anyObjectPassingTest:(nonnull DHFilterPredicate)predicate
 {
-	if (predicate == nil) {
-		@throw DH_EXCEPTION(NSInvalidArgumentException, @"%s: predicate cannot be nil", __PRETTY_FUNCTION__);
-	}
-	
 	return [[self objectsPassingTest:^BOOL(id obj, BOOL *stop) {
-		if (predicate(obj, stop)) {
+		if (predicate(obj)) {
 			*stop = YES;
 			return YES;
 		}
@@ -57,9 +51,9 @@
 
 @implementation NSMutableSet (DHAdditions)
 
-- (id)dh_removeAnyObjectPassingTest:(BOOL (^)(id obj, BOOL *stop))predicate
+- (nullable id)dh_removeAnyObjectPassingTest:(nonnull DHFilterPredicate)predicate
 {
-	id object = [self dh_anyObjectPassingTest:predicate];
+	id const object = [self dh_anyObjectPassingTest:predicate];
 	
 	if (object == nil) {
 		return nil;

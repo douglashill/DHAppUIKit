@@ -5,32 +5,32 @@
 
 @implementation NSDictionary (DHJSONReading)
 
-- (NSString *)dh_stringForKey:(NSString *)key
+- (nullable NSString *)dh_stringForKey:(nonnull NSString *)key
 {
 	return [self dh_objectForKey:key ofClass:[NSString class]];
 }
 
-- (NSNumber *)dh_numberForKey:(NSString *)key;
+- (nullable NSNumber *)dh_numberForKey:(nonnull NSString *)key;
 {
 	return [self dh_objectForKey:key ofClass:[NSNumber class]];
 }
 
-- (NSArray *)dh_arrayForKey:(NSString *)key;
+- (nullable NSArray *)dh_arrayForKey:(nonnull NSString *)key;
 {
 	return [self dh_objectForKey:key ofClass:[NSArray class]];
 }
 
-- (NSDictionary *)dh_dictionaryForKey:(NSString *)key;
+- (nullable NSDictionary *)dh_dictionaryForKey:(nonnull NSString *)key;
 {
 	return [self dh_objectForKey:key ofClass:[NSDictionary class]];
 }
 
-- (NSNull *)dh_nullForKey:(NSString *)key;
+- (nullable NSNull *)dh_nullForKey:(nonnull NSString *)key;
 {
 	return [self dh_objectForKey:key ofClass:[NSNull class]];
 }
 
-- (id)dh_objectForKey:(NSString *)key ofClass:(Class)class
+- (nullable id)dh_objectForKey:(nonnull NSString *)key ofClass:(nonnull Class)class
 {
 	if ([self[key] isKindOfClass:class] == NO) {
 		return nil;

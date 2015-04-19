@@ -3,14 +3,14 @@
 
 #import "DHCompositeTransformer.h"
 
+#import "DHExceptionCreation.h"
 #import "NSArray+DHFold.h"
 
 @implementation DHCompositeTransformer
 
-+ (NSArray *)transformerClasses
++ (nonnull NSArray *)transformerClasses
 {
-	[NSException raise:NSInternalInconsistencyException format:@"Subclasses must override %s.", __PRETTY_FUNCTION__];
-	return nil;
+	@throw DH_EXCEPTION(NSInternalInconsistencyException, @"Subclasses must override %s.", __PRETTY_FUNCTION__);
 }
 
 - (instancetype)init
@@ -18,10 +18,9 @@
 	return [self initWithTransformers:nil];
 }
 
-- (instancetype)initWithTransformers:(NSArray *)transformers
+- (nonnull instancetype)initWithTransformers:(nullable NSArray *)transformers
 {
 	self = [super init];
-	if (self == nil) return nil;
 	
 	_transformers = transformers ? [transformers copy] : [[[self class] transformerClasses] valueForKey:NSStringFromSelector(@selector(new))];
 	
