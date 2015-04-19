@@ -1,4 +1,4 @@
-# Objective-C bits and bobs #
+# DHUtilities #
 
 Objective-C classes and categories that are not associated with a full project.
 

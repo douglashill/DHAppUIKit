@@ -1,5 +1,5 @@
 // Douglas Hill, February 2014
-// https://github.com/douglashill/Objective-C-bits-and-bobs
+// https://github.com/douglashill/DHUtilities
 
 #import "NSDictionary+DHJSONReading.h"
 

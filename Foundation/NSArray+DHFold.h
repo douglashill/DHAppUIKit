@@ -1,5 +1,5 @@
 // Douglas Hill, August 2014
-// https://github.com/douglashill/Objective-C-bits-and-bobs
+// https://github.com/douglashill/DHUtilities
 
 @import Foundation;
 

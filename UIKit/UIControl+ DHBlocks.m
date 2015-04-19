@@ -1,5 +1,5 @@
 // Douglas Hill, October 2013
-// https://github.com/douglashill/Objective-C-bits-and-bobs
+// https://github.com/douglashill/DHUtilities
 
 #import "UIControl+ DHBlocks.h"
 
