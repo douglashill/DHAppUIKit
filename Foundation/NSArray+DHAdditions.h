@@ -14,12 +14,10 @@
 @end
 
 typedef BOOL (^DHIndexedCollectionFilterPredicate)(id __nonnull object, NSUInteger idx, BOOL *__nonnull stop);
-typedef BOOL (^DHIndexedFilterPredicate)(id __nonnull object, NSUInteger idx);
 
 @interface NSArray (DHExtendedArray)
 
 - (nonnull NSArray *)dh_objectsPassingTest:(nonnull DHIndexedCollectionFilterPredicate)predicate;
-- (nullable id)dh_firstObjectPassingTest:(nonnull DHIndexedFilterPredicate)predicate;
-- (NSUInteger)dh_indexOfFirstObjectPassingTest:(nonnull DHIndexedFilterPredicate)predicate;
+- (nullable id)dh_objectPassingTest:(nonnull DHIndexedCollectionFilterPredicate)predicate;
 
 @end

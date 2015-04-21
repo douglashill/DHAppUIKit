@@ -41,22 +41,11 @@
 	return [self objectsAtIndexes:[self indexesOfObjectsPassingTest:predicate]];
 }
 
-- (nullable id)dh_firstObjectPassingTest:(nonnull DHIndexedFilterPredicate)predicate
+- (nullable id)dh_objectPassingTest:(nonnull DHIndexedCollectionFilterPredicate)predicate
 {
-	NSUInteger const indexOfFirstMatchingObject = [self dh_indexOfFirstObjectPassingTest:predicate];
+	NSUInteger const indexOfFirstMatchingObject = [self indexOfObjectPassingTest:predicate];
 	if (indexOfFirstMatchingObject == NSNotFound) return nil;
 	return self[indexOfFirstMatchingObject];
-}
-
-- (NSUInteger)dh_indexOfFirstObjectPassingTest:(nonnull DHIndexedFilterPredicate)predicate
-{
-	return [[self indexesOfObjectsPassingTest:^BOOL(id object, NSUInteger idx, BOOL *stop) {
-		if (predicate(object, idx)) {
-			*stop = YES;
-			return YES;
-		}
-		return NO;
-	}] firstIndex];
 }
 
 @end
