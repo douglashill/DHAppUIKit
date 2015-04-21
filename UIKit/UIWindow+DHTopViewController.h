@@ -5,7 +5,10 @@
 
 @interface UIWindow (DHTopViewController)
 
-/// Returns the top presented view controller on the receiver’s root view controller’s.
+/**
+ @brief Returns the top presented view controller on the window’s root view controller.
+ @return The top presented view controller on the window’s root view controller.
+ */
 - (nullable UIViewController *)dh_topViewController;
 
 @end
