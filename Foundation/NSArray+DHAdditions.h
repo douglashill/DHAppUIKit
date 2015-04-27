@@ -8,6 +8,15 @@
 @interface NSArray (DHMap)
 
 /**
+ @brief Returns an array containing the results of calling @c map with the indices in a given range.
+ This method is typically used to map a C array to an @c NSArray.
+ @param range The range of indices to call @c map with.
+ @param map   A block that maps from an index in @c range to an object to be included in the returned array. The block may return @c nil to skip adding a corresponding object to the returned array.
+ @return An array containing the results of calling @c map with each index in @c range, or an empty array if the length of @c range is 0.
+ */
++ (nonnull NSArray *)dh_arrayByMappingRange:(NSRange)range usingMap:(nonnull DHIndexToObjectMap)map;
+
+/**
  Returns an array containing the results of calling map with each of the receiving array’s objects.
  @param map The block that maps from an object in the receiving array to an object to be included in the returned array. The block may return nil to skip adding a corresponding object to the returned array.
  @return An array containing the results of calling map with each of the receiving array’s objects.

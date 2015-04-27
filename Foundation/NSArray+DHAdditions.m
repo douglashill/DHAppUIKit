@@ -5,6 +5,18 @@
 
 @implementation NSArray (DHMap)
 
++ (nonnull NSArray *)dh_arrayByMappingRange:(NSRange)range usingMap:(nonnull DHIndexToObjectMap)map
+{
+	NSMutableArray *mappedArray = [NSMutableArray arrayWithCapacity:range.length];
+	
+	for (NSUInteger idx = range.location; idx < range.location + range.length; ++idx) {
+		id const mappedObject = map(idx);
+		if (mappedObject) [mappedArray addObject:mappedObject];
+	}
+	
+	return mappedArray;
+}
+
 - (nonnull NSArray *)dh_arrayByMappingObjectsUsingMap:(nonnull DHObjectMap)map
 {
 	NSMutableArray *mappedArray = [NSMutableArray arrayWithCapacity:[self count]];
