@@ -1,5 +1,5 @@
 // Douglas Hill, September 2012
-// https://github.com/douglashill/DHUtilities
+// https://github.com/douglashill/DHAppUIKit
 
 #import "UIView+DHPixelGrid.h"
 

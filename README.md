@@ -1,6 +1,6 @@
-# DHUtilities #
+# DHAppUIKit #
 
-Objective-C classes and categories that are not associated with a full project.
+Objective-C utilities to complement AppKit and UIKit for OS X and iOS apps.
 
 ## Licence ##
 

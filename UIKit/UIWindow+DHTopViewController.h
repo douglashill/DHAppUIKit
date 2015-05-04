@@ -1,5 +1,5 @@
 // Douglas Hill, November 2013
-// https://github.com/douglashill/DHUtilities
+// https://github.com/douglashill/DHAppUIKit
 
 @import UIKit;
 

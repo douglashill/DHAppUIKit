@@ -1,5 +1,5 @@
 // Douglas Hill, April 2015
-// https://github.com/douglashill/DHUtilities
+// https://github.com/douglashill/DHAppUIKit
 
 @import Foundation;
 
