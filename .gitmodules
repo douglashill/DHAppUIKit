@@ -1,0 +1,3 @@
+[submodule "External/DHFoundation"]
+	path = External/DHFoundation
+	url = https://github.com/douglashill/DHFoundation.git

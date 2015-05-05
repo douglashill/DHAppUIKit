@@ -1,11 +1,9 @@
-#if 0
 // Douglas Hill, April 2015
 // https://github.com/douglashill/DHAppUIKit
 
 #import "NSIndexPath+DHUnsigned.h"
 
-#import "DHIntegerConversion.h"
-
+@import DHFoundation.DHIntegerConversion;
 @import UIKit.UICollectionView;
 @import UIKit.UITableView;
 
@@ -37,4 +35,3 @@
 }
 
 @end
-#endif

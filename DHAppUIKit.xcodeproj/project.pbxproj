@@ -25,6 +25,7 @@
 		A5F0B0DC1AF8EA4E007001D4 /* DHViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A5F0B0C71AF8EA21007001D4 /* DHViewAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5F0B0DE1AF8EBC1007001D4 /* DHAppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A5F0B0DD1AF8EBC1007001D4 /* DHAppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5F0B0E01AF8EBD0007001D4 /* DHUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A5F0B0DF1AF8EBD0007001D4 /* DHUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5F0B0F21AF8F650007001D4 /* DHFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F0B0EF1AF8F5FC007001D4 /* DHFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,41 @@
 			proxyType = 1;
 			remoteGlobalIDString = A50B1E4A1AF8D46B004893C4;
 			remoteInfo = "DHAppUIKit iOS";
+		};
+		A5F0B0EA1AF8F5FC007001D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5F0B0E31AF8F5FC007001D4 /* DHFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A50B1E2D1AF8D453004893C4;
+			remoteInfo = "DHFoundation OS X";
+		};
+		A5F0B0EC1AF8F5FC007001D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5F0B0E31AF8F5FC007001D4 /* DHFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A50B1E371AF8D453004893C4;
+			remoteInfo = "DHFoundation OS X Tests";
+		};
+		A5F0B0EE1AF8F5FC007001D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5F0B0E31AF8F5FC007001D4 /* DHFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A50B1E4B1AF8D46B004893C4;
+			remoteInfo = "DHFoundation iOS";
+		};
+		A5F0B0F01AF8F5FC007001D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5F0B0E31AF8F5FC007001D4 /* DHFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A50B1E551AF8D46B004893C4;
+			remoteInfo = "DHFoundation iOS Tests";
+		};
+		A5F0B0F31AF8F663007001D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5F0B0E31AF8F5FC007001D4 /* DHFoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A50B1E4A1AF8D46B004893C4;
+			remoteInfo = "DHFoundation iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -64,6 +100,7 @@
 		A5F0B0D01AF8EA21007001D4 /* UIWindow+DHTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+DHTopViewController.m"; sourceTree = "<group>"; };
 		A5F0B0DD1AF8EBC1007001D4 /* DHAppKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHAppKit.h; sourceTree = "<group>"; };
 		A5F0B0DF1AF8EBD0007001D4 /* DHUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHUIKit.h; sourceTree = "<group>"; };
+		A5F0B0E31AF8F5FC007001D4 /* DHFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = DHFoundation.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F0B0F21AF8F650007001D4 /* DHFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +144,7 @@
 				A51D31BD1AF83975000624AD /* Source */,
 				A51D31BB1AF83975000624AD /* Resources */,
 				A51D31881AF83637000624AD /* Tests */,
+				A5F0B0E11AF8F5CB007001D4 /* External */,
 				A51D317A1AF83637000624AD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -155,6 +194,33 @@
 				A5F0B0D01AF8EA21007001D4 /* UIWindow+DHTopViewController.m */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		A5F0B0E11AF8F5CB007001D4 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				A5F0B0E21AF8F5EA007001D4 /* DHFoundation */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		A5F0B0E21AF8F5EA007001D4 /* DHFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				A5F0B0E31AF8F5FC007001D4 /* DHFoundation.xcodeproj */,
+			);
+			path = DHFoundation;
+			sourceTree = "<group>";
+		};
+		A5F0B0E41AF8F5FC007001D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5F0B0EB1AF8F5FC007001D4 /* DHFoundation.framework */,
+				A5F0B0ED1AF8F5FC007001D4 /* DHFoundationTests.xctest */,
+				A5F0B0EF1AF8F5FC007001D4 /* DHFoundation.framework */,
+				A5F0B0F11AF8F5FC007001D4 /* DHFoundationTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +299,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A5F0B0F41AF8F663007001D4 /* PBXTargetDependency */,
 			);
 			name = DHUIKit;
 			productName = "DHAppUIKit iOS";
@@ -290,6 +357,12 @@
 			mainGroup = A51D316F1AF83637000624AD;
 			productRefGroup = A51D317A1AF83637000624AD /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A5F0B0E41AF8F5FC007001D4 /* Products */;
+					ProjectRef = A5F0B0E31AF8F5FC007001D4 /* DHFoundation.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A50B1E2C1AF8D453004893C4 /* DHAppKit */,
@@ -299,6 +372,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A5F0B0EB1AF8F5FC007001D4 /* DHFoundation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DHFoundation.framework;
+			remoteRef = A5F0B0EA1AF8F5FC007001D4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A5F0B0ED1AF8F5FC007001D4 /* DHFoundationTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DHFoundationTests.xctest;
+			remoteRef = A5F0B0EC1AF8F5FC007001D4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A5F0B0EF1AF8F5FC007001D4 /* DHFoundation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DHFoundation.framework;
+			remoteRef = A5F0B0EE1AF8F5FC007001D4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A5F0B0F11AF8F5FC007001D4 /* DHFoundationTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DHFoundationTests.xctest;
+			remoteRef = A5F0B0F01AF8F5FC007001D4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A50B1E2B1AF8D453004893C4 /* Resources */ = {
@@ -380,6 +484,11 @@
 			isa = PBXTargetDependency;
 			target = A50B1E4A1AF8D46B004893C4 /* DHUIKit */;
 			targetProxy = A50B1E571AF8D46B004893C4 /* PBXContainerItemProxy */;
+		};
+		A5F0B0F41AF8F663007001D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "DHFoundation iOS";
+			targetProxy = A5F0B0F31AF8F663007001D4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
