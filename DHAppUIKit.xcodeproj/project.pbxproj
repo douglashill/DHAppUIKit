@@ -11,6 +11,8 @@
 		A50B1E561AF8D46B004893C4 /* DHUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50B1E4B1AF8D46B004893C4 /* DHUIKit.framework */; };
 		A50B1E641AF8D515004893C4 /* DHAppUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A51D318B1AF83637000624AD /* DHAppUIKitTests.m */; };
 		A50B1E651AF8D516004893C4 /* DHAppUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A51D318B1AF83637000624AD /* DHAppUIKitTests.m */; };
+		A57922331B5A5A3400336D19 /* DHPanGestureRecogniser.h in Headers */ = {isa = PBXBuildFile; fileRef = A57922311B5A5A3400336D19 /* DHPanGestureRecogniser.h */; };
+		A57922341B5A5A3400336D19 /* DHPanGestureRecogniser.m in Sources */ = {isa = PBXBuildFile; fileRef = A57922321B5A5A3400336D19 /* DHPanGestureRecogniser.m */; };
 		A5F0B0D11AF8EA21007001D4 /* DHViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A5F0B0C71AF8EA21007001D4 /* DHViewAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5F0B0D21AF8EA21007001D4 /* DHViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F0B0C81AF8EA21007001D4 /* DHViewAdditions.m */; };
 		A5F0B0D31AF8EA21007001D4 /* NSIndexPath+DHUnsigned.h in Headers */ = {isa = PBXBuildFile; fileRef = A5F0B0C91AF8EA21007001D4 /* NSIndexPath+DHUnsigned.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -88,6 +90,8 @@
 		A51D318A1AF83637000624AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A51D318B1AF83637000624AD /* DHAppUIKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHAppUIKitTests.m; sourceTree = "<group>"; };
 		A51D31BC1AF83975000624AD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A57922311B5A5A3400336D19 /* DHPanGestureRecogniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHPanGestureRecogniser.h; sourceTree = "<group>"; };
+		A57922321B5A5A3400336D19 /* DHPanGestureRecogniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPanGestureRecogniser.m; sourceTree = "<group>"; };
 		A5F0B0C71AF8EA21007001D4 /* DHViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHViewAdditions.h; sourceTree = "<group>"; };
 		A5F0B0C81AF8EA21007001D4 /* DHViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHViewAdditions.m; sourceTree = "<group>"; };
 		A5F0B0C91AF8EA21007001D4 /* NSIndexPath+DHUnsigned.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+DHUnsigned.h"; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 				A5F0B0DF1AF8EBD0007001D4 /* DHUIKit.h */,
 				A5F0B0C71AF8EA21007001D4 /* DHViewAdditions.h */,
 				A5F0B0C81AF8EA21007001D4 /* DHViewAdditions.m */,
+				A57922311B5A5A3400336D19 /* DHPanGestureRecogniser.h */,
+				A57922321B5A5A3400336D19 /* DHPanGestureRecogniser.m */,
 				A5F0B0C91AF8EA21007001D4 /* NSIndexPath+DHUnsigned.h */,
 				A5F0B0CA1AF8EA21007001D4 /* NSIndexPath+DHUnsigned.m */,
 				A5F0B0CB1AF8EA21007001D4 /* UIControl+ DHBlocks.h */,
@@ -241,6 +247,7 @@
 			files = (
 				A5F0B0D51AF8EA21007001D4 /* UIControl+ DHBlocks.h in Headers */,
 				A5F0B0D91AF8EA21007001D4 /* UIWindow+DHTopViewController.h in Headers */,
+				A57922331B5A5A3400336D19 /* DHPanGestureRecogniser.h in Headers */,
 				A5F0B0D31AF8EA21007001D4 /* NSIndexPath+DHUnsigned.h in Headers */,
 				A5F0B0E01AF8EBD0007001D4 /* DHUIKit.h in Headers */,
 				A5F0B0D71AF8EA21007001D4 /* UIView+DHPixelGrid.h in Headers */,
@@ -461,6 +468,7 @@
 				A5F0B0D21AF8EA21007001D4 /* DHViewAdditions.m in Sources */,
 				A5F0B0D41AF8EA21007001D4 /* NSIndexPath+DHUnsigned.m in Sources */,
 				A5F0B0D81AF8EA21007001D4 /* UIView+DHPixelGrid.m in Sources */,
+				A57922341B5A5A3400336D19 /* DHPanGestureRecogniser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
